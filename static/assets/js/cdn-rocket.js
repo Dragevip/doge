@@ -119,6 +119,8 @@ function disableTabCloak() {
 
 function openWindow() {
   var win = window.open();
+  var title = win.document.createElement("title")
+  win.document.head.appendChild(title);
   win.document.body.style.margin = "0";
   win.document.body.style.height = "100vh";
   var iframe = win.document.createElement("iframe");
