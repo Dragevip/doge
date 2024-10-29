@@ -21,7 +21,7 @@ if (blankerCheck === "enabled") {
     if (!popup || popup.closed) {
       alert("Please allow popups and redirects for about:blank cloak to work.");
     } else {
-      popup.document.title = "My Drive - Google Drive";
+      popup.document.title = "Google";
       const link = popup.document.createElement("link");
       link.rel = "icon";
       link.href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
@@ -130,6 +130,7 @@ function openWindow() {
   iframe.style.margin = "0";
   iframe.src = window.location.href;
   win.document.body.appendChild(iframe);
+  window.location.replace("https://google.com")
 }
 
 function showContextMenu(event) {
